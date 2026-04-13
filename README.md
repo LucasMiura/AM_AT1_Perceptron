@@ -1,55 +1,60 @@
-# 🎯 AM_AT1_Perceptron
+# 📈 AM_AT1_Perceptron
 
 ## 📌 Sobre o Projeto
 
 Este projeto foi desenvolvido para a atividade AT1 da disciplina de Aprendizado de Máquina.
 
-O objetivo é implementar um **Perceptron manual**, sem o uso de bibliotecas como numpy, aplicando o modelo em um cenário prático:
-👉 prever se uma pessoa irá comparecer a um evento.
+O objetivo é implementar um **Perceptron manual**, sem o uso de bibliotecas como numpy, aplicando o modelo em um cenário real:
+👉 previsão de comportamento do preço de ações.
 
 ---
 
-## 🧠 Problema Proposto
+## 🎯 Problema Proposto
 
-A proposta simula uma situação real de plataformas de eventos (como o VaiVale), onde é necessário prever o comportamento do usuário.
+O projeto busca prever se o preço da ação da empresa McDonald's (MCD) irá **subir ou não no próximo dia**, com base em dados históricos do mercado financeiro.
 
-O modelo utiliza variáveis como:
+A saída do modelo é:
 
-* 🎟️ Interesse no evento
-* 📍 Distância até o local
-* 💰 Preço
-* 👥 Presença de amigos
-
-Saída:
-
-* ✅ Vai ao evento
-* ❌ Não vai ao evento
+* 📈 1 → preço sobe
+* 📉 0 → preço não sobe
 
 ---
 
 ## 📊 Dataset
 
-O dataset foi **criado manualmente**, simulando decisões reais de usuários.
+O dataset foi obtido na plataforma Kaggle e contém dados históricos das ações da empresa McDonald's.
 
 📁 Local:
 
 ```
-data/raw/eventos.csv
+data/raw/mcd.csv
 ```
 
-### Variáveis:
+### Variáveis disponíveis:
 
-| Variável  | Descrição                        |
-| --------- | -------------------------------- |
-| interesse | Nível de interesse (0 a 10)      |
-| distancia | Distância até o evento           |
-| preco     | Valor do ingresso                |
-| amigos    | Se amigos vão (0 ou 1)           |
-| vai       | Resultado (1 = vai, 0 = não vai) |
+| Variável | Descrição           |
+| -------- | ------------------- |
+| Date     | Data da negociação  |
+| Open     | Preço de abertura   |
+| High     | Maior preço do dia  |
+| Low      | Menor preço do dia  |
+| Close    | Preço de fechamento |
+| Volume   | Volume negociado    |
 
 ---
 
-## 🧠 Modelo Utilizado
+## 🧠 Construção do Problema
+
+Foi criada uma variável alvo (`target`) para transformar o problema em classificação binária:
+
+* 1 → o preço de fechamento do próximo dia é maior
+* 0 → o preço não aumenta
+
+Isso foi feito comparando o valor atual com o próximo dia.
+
+---
+
+## ⚙️ Modelo Utilizado
 
 Foi implementado um **Perceptron do zero**, contendo:
 
@@ -58,8 +63,25 @@ Foi implementado um **Perceptron do zero**, contendo:
 * Função de ativação degrau
 * Treinamento por ajuste de pesos
 
-🚫 Sem uso de bibliotecas de machine learning
 🚫 Sem uso de numpy
+🚫 Sem uso de bibliotecas de machine learning
+
+---
+
+## 🔎 Variáveis de Entrada
+
+As variáveis escolhidas para o modelo foram:
+
+* 📊 Open → preço de abertura
+* 📦 Volume → volume de negociações
+
+Essas variáveis influenciam diretamente o comportamento do mercado.
+
+---
+
+## 📈 Visualização dos Dados
+
+Foi utilizado gráfico de dispersão para observar a separação entre as classes.
 
 ---
 
@@ -70,7 +92,7 @@ AM_AT1_Perceptron/
 │
 ├── data/
 │   └── raw/
-│       └── eventos.csv
+│       └── mcd.csv
 │
 ├── notebooks/
 │   └── AT1_Perceptron.ipynb
@@ -110,20 +132,24 @@ jupyter notebook
 
 ---
 
-## 📈 Objetivo Acadêmico
+## 📊 Objetivo Acadêmico
 
-Este projeto tem como foco compreender na prática:
+Este projeto tem como objetivo compreender na prática:
 
 * Funcionamento do Perceptron
-* Processo de treinamento
-* Ajuste de pesos
 * Classificação binária
+* Ajuste de pesos
+* Aplicação em dados reais
 
 ---
 
-## 💡 Possível Aplicação
+## 💡 Aplicação Prática
 
-O modelo desenvolvido pode ser aplicado em sistemas de recomendação de eventos, auxiliando na previsão de comportamento de usuários.
+O modelo pode ser utilizado como base para:
+
+* Análise de tendências do mercado
+* Sistemas de apoio à decisão
+* Estudos iniciais de previsão financeira
 
 ---
 
@@ -135,4 +161,4 @@ Lucas Miura
 
 ## 🧠 Observação
 
-Este projeto tem caráter didático e foi desenvolvido para fins de aprendizado em Machine Learning.
+Este projeto possui caráter didático e foi desenvolvido com fins educacionais na área de Machine Learning.

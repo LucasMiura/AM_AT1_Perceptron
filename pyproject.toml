@@ -1,7 +1,7 @@
 [project]
 name = "am-at1-perceptron"
 version = "0.1.0"
-description = "Modelo de Perceptron para previsão de comportamento de usuários em eventos"
+description = "Perceptron manual para previsão de tendência de ações da McDonald's (MCD)"
 readme = "README.md"
 requires-python = ">=3.10"
 

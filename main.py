@@ -1,6 +1,7 @@
 def main():
-    print("AM_AT1 - Perceptron Manual")
-    print("Projeto: Previsão de participação em eventos")
+    print("AT1 - Perceptron Manual")
+    print("Projeto: Previsão de tendência de ações (MCD)")
+    print("Dataset: McDonald's Historical Stock Price (Kaggle)")
     print("Aluno: Lucas Miura")
 
 

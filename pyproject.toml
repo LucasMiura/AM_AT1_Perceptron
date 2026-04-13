@@ -1,0 +1,17 @@
+[project]
+name = "am-at1-perceptron"
+version = "0.1.0"
+description = "Modelo de Perceptron para previsão de comportamento de usuários em eventos"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+]
+
+[dependency-groups]
+dev = [
+    "notebook>=7.0.0",
+    "ipykernel>=6.0.0",
+]
